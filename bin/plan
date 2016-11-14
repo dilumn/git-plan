@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+# Trap interrupts to quit cleanly. See
+Signal.trap('INT') { abort }
+
+require 'git/plan'
+
+begin
+  Git::Plan::CLI.start(ARGV)
+rescue Interrupt
+  pute 'Quitting...'
+end
