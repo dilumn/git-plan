@@ -13,6 +13,15 @@ module Git
         @data = load_file
       end
 
+      def add_command(hash)
+        @data['commands'].merge!(hash)
+        write
+      end
+
+      def test
+        puts "testing 123"
+      end
+
       def delete
         File.delete(@path) if File.exist?(@path)
       end

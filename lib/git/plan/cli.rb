@@ -9,12 +9,13 @@ module Git
       def initialize(*)
         @cfile = Git::Plan::ConfigFile.instance
         super
-        puts "intialized"
       end
 
       desc 'add', 'add commands to use later by batch'
       def add(command, group)
         puts "send post hits"
+        hash = {command => group}
+        @cfile.add_command(hash)
       end
 
     end
