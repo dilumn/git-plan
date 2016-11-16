@@ -18,8 +18,8 @@ module Git
         write
       end
 
-      def test
-        puts "testing 123"
+      def run(command)
+        @data['commands'][command]
       end
 
       def delete

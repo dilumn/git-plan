@@ -13,9 +13,14 @@ module Git
 
       desc 'add', 'add commands to use later by batch'
       def add(command, group)
-        puts "send post hits"
         hash = {command => group}
         @cfile.add_command(hash)
+      end
+
+      desc 'r', 'run set of git commands configured before'
+      def r(command)
+        group = @cfile.run(command).split(',')
+        group.each { |x| system "bash", "-c", x }
       end
 
     end
