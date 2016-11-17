@@ -18,9 +18,18 @@ module Git
       end
 
       desc 'r', 'run set of git commands configured before'
-      def r(command)
+      def r(command, variables)
+        variable_count = 0
         group = @cfile.run(command).split(',')
-        group.each { |x| system "bash", "-c", x }
+        variables = variables.split(',')
+        group.each { |value|
+          if value.include? "#"
+            value.gsub! '#', variables[variable_count]
+            variable_count += 1
+            binding.pry
+          end
+          system "bash", "-c", value
+        }
       end
 
     end
