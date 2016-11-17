@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Plan your batch of Git commands}
   spec.description   = %q{Configure set of git commands to run at the same time}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "http://dilumn.github.io"
   spec.license       = "MIT"
 
 
