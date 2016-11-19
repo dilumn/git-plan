@@ -11,13 +11,13 @@ module Git
         super
       end
 
-      desc 'add', 'add commands to use later by batch'
+      desc 'add', 'add set of git commands with an alias to use later. Eg: plan add stat "git status, git log"'
       def add(command, group)
         hash = {command => group}
         @cfile.add_command(hash)
       end
 
-      desc 'r', 'run set of git commands configured before'
+      desc 'r', 'run set of git commands configured from adding. Eg: plan r stat'
       def r(command, variables)
         variable_count = 0
         group = @cfile.run(command).split(',')
@@ -26,8 +26,8 @@ module Git
           if value.include? "#"
             value.gsub! '#', variables[variable_count]
             variable_count += 1
-            binding.pry
           end
+          say "########################EXECUTING #{value}##############################"
           system "bash", "-c", value
         }
       end
