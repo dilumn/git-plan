@@ -43,30 +43,30 @@ Once you've verified that Ruby is installed:
 
 ###Before execute set of git commands from a single command, configure the commands with an alias by,
 
-`plan add ALIASNAME "GIT COMMAND, GIT COMMAND2, GIT COMMAND3, GIT COMMAND4 #"`
+    plan add ALIASNAME "GIT COMMAND, GIT COMMAND2, GIT COMMAND3, GIT COMMAND4 #"
 
 Eg:
 
-`plan add eg1 "git status, git log"`
+    plan add eg1 "git status, git log"
 
-`plan add eg2 "git status, git commit -m "#", git push origin #"`
+    plan add eg2 "git status, git commit -m "#", git push origin #"
 
 Use # symbol if you want to use a dynamic word inside the command(Eg: branch name)
 
 
 ###To run configured set of commands,
 
-`plan r ALIASNAME "VARIABLE1, VARIABLE2"`
+    plan r ALIASNAME "VARIABLE1, VARIABLE2"
 
 Eg:
 
-`plan r eg1`
+    plan r eg1
 
-`plan r eg2 "HERE IS THE COMMIT MESSAGE, master"`
+    plan r eg2 "HERE IS THE COMMIT MESSAGE, master"
 
 ###Help
 
-`plan help`
+    plan help
 
 
 ## Contributing
