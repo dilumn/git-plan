@@ -64,6 +64,17 @@ Eg:
 
     plan r eg2 "HERE IS THE COMMIT MESSAGE, master"
 
+
+###To see the command set before executing,
+
+    plan inspect ALIASNAME "VARIABLE1, VARIABLE2"
+
+Eg:
+
+    plan inspect eg1
+
+    plan inspect eg2 "HERE IS THE COMMIT MESSAGE, master"
+
 ###Help
 
     plan help

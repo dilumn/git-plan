@@ -19,7 +19,26 @@ module Git
 
       desc 'r', 'run set of git commands configured from adding. Eg: plan r stat'
       def r(command, variables)
+        get_command_list(command, variables).each { |value|
+          say "########################EXECUTING #{value}##############################"
+          system "bash", "-c", value
+        }
+      end
+
+      desc 'inspect', 'see the command list for an alias before executing'
+      def inspect(command, variables)
+        get_command_list(command, variables).each { |value|
+          say "#{value}"
+        }
+        say ""
+      end
+
+
+    private
+
+      def get_command_list(command, variables)
         variable_count = 0
+        command_list = []
         group = @cfile.run(command).split(',')
         variables = variables.split(',')
         group.each { |value|
@@ -27,9 +46,9 @@ module Git
             value.gsub! '#', variables[variable_count]
             variable_count += 1
           end
-          say "########################EXECUTING #{value}##############################"
-          system "bash", "-c", value
+          command_list << value
         }
+        command_list
       end
 
     end
