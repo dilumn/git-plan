@@ -1,5 +1,4 @@
-# Git-Plan
-[![Gem Version](https://img.shields.io/gem/v/git-plan.svg)][gem]
+# Git-Plan [![Gem Version](https://img.shields.io/gem/v/git-plan.svg)][gem]
 
 [gem]: https://rubygems.org/gems/git-plan
 
