@@ -1,4 +1,4 @@
-# Git-Plan [![Gem Version](https://img.shields.io/gem/v/git-plan.svg)][gem]
+# Git-Plan [![Gem Version](https://img.shields.io/gem/v/git-plan.svg)][gem] [![Build Status](https://travis-ci.org/dilumn/git-plan.svg?branch=master)](https://travis-ci.org/dilumn/git-plan)
 
 [gem]: https://rubygems.org/gems/git-plan
 
