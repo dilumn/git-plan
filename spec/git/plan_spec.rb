@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe Git::Plan do
+describe Git::Plan::VERSION do
   it 'has a version number' do
     expect(Git::Plan::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'should be versioned correctly' do
+    expect(Git::Plan::VERSION.count('.')).to be 2
   end
 end
