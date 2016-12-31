@@ -8,11 +8,6 @@ describe Git::Plan::ConfigFile do
       expect(ccfile).not_to be nil
     end
 
-    it 'Localfile exist in the correct location' do
-      file = YAML.load_file(ccfile.path)
-      expect(file).not_to eq nil
-    end
-
     it 'ConfigFile add commands to localfile' do
       hash = {"status" => "git status, git log"}
       ccfile.add_command hash
