@@ -23,6 +23,9 @@ describe Git::Plan::ConfigFile do
     end
 
     it 'ConfigFile run the command from the localfile' do
+      hash = {"status" => "git status, git log"}
+      ccfile.add_command hash
+
       command = ccfile.run "status"
       expect(command).to eq "git status, git log"
     end
