@@ -24,4 +24,13 @@ describe Git::Plan::ConfigFile do
       command = ccfile.run "status"
       expect(command).to eq "git status, git log"
     end
+
+    it 'write method in ConfigFile is private' do
+      expect{ccfile.write}.to raise_error(NoMethodError)
+    end
+
+    it 'default_structure method in ConfigFile is private' do
+      expect{ccfile.default_structure}.to raise_error(NoMethodError)
+    end
+
 end
