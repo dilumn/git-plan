@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Git::Plan::ConfigFile do
-  describe 'Cli integration'
+  describe 'Cli integration' do
     let(:ccfile) { Git::Plan::ConfigFile.instance }
 
     it 'ConfigFile load the local file' do
@@ -32,5 +32,5 @@ describe Git::Plan::ConfigFile do
     it 'default_structure method in ConfigFile is private' do
       expect{ccfile.default_structure}.to raise_error(NoMethodError)
     end
-
+  end
 end
