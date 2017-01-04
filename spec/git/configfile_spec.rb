@@ -32,5 +32,6 @@ describe Git::Plan::ConfigFile do
     it 'default_structure method in ConfigFile is private' do
       expect{ccfile.default_structure}.to raise_error(NoMethodError)
     end
+
   end
 end
