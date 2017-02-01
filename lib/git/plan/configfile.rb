@@ -54,6 +54,7 @@ module Git
       end
 
       def default_structure
+        # TODO: Load a json file with specific default commands, so the user can run default set of git commands by default
         {'commands' => {}}
       end
     end
