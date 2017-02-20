@@ -33,6 +33,14 @@ module Git
         say ""
       end
 
+      desc 'showall', 'show all the commands and alias saved currently'
+      def showall()
+        @cfile.get_all.each do |key, value|
+          say "#{key} - #{value}"
+        end
+        say ""
+      end
+
 
     private
 

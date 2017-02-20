@@ -22,6 +22,10 @@ module Git
         @data['commands'][command]
       end
 
+      def get_all
+        @data['commands']
+      end
+
       def delete
         File.delete(@path) if File.exist?(@path)
       end
