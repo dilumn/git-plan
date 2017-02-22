@@ -74,6 +74,12 @@ Eg:
 
     plan inspect eg2 "HERE IS THE COMMIT MESSAGE, master"
 
+
+###To see all the commands configured,
+
+    plan showall
+
+
 ###Help
 
     plan help
